@@ -1,0 +1,8 @@
+SELECT name FROM babynames WHERE us_state = 'MD' AND gender = 'M' AND date_year = 1991 ORDER BY num_babies DESC FETCH FIRST 1 ROWS ONLY;
+SELECT date_year FROM babynames WHERE name = 'Christopher' AND gender = 'M' ORDER BY num_babies DESC FETCH FIRST 1 ROWS ONLY;
+SELECT date_year FROM babynames WHERE name = 'Rosemary' AND gender = 'F' ORDER BY num_babies DESC FETCH FIRST 1 ROWS ONLY;
+SELECT name FROM babynames WHERE us_state = 'MD' AND date_year = 2000 AND num_babies > 500 ORDER BY num_babies DESC;
+SELECT us_state FROM babynames WHERE name = 'Xavier' AND date_year = 2014 AND gender = 'M' ORDER BY num_babies ASC FETCH FIRST 1 ROWS ONLY;
+SELECT us_state FROM babynames WHERE name = 'Hannah' AND date_year = 1997 AND gender = 'F' ORDER BY num_babies DESC FETCH FIRST 1 ROWS ONLY;
+INSERT INTO babynames (id, name, date_year, gender, us_state, num_babies) VALUES (10000000, 'Joseph', 2016, 'M', 'PA', 476);
+DELETE FROM babynames WHERE id = 10000000;
